@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,15 +16,26 @@
     <section id="header">
         <a href="#"><img src="./images/Singrian_shop.png" alt="" class="logo" style="height: 50px;"></a>
 
-        <ul id="navbar">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i>
-                </a></li>
-        </ul>
+        <div>
+            <ul id="navbar">
+
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <a href="" id="close"><i class="fa fa-times"></i>
+                </a>
+
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid lg-bag fa-bag-shopping"></i></a>
+            <i class="fa fa-bars" id="bar"></i>
+
+
+        </div>
+
 
     </section>
 
@@ -501,6 +513,23 @@
             @2024-Devloped by Sunail Singrian
         </div>
     </footer>
+
+    <script>
+
+        const bar = document.getElementById('bar');
+        const close = document.getElementById('close');
+        const nav = document.getElementById('navbar');
+
+        if (bar) {
+            bar.addEventListener('click', function () {
+                nav.classList.add('active');
+
+            })
+        }
+        bar.classList.remove('active')
+
+      
+    </script>
 
 
 
